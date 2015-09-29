@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, inital-scale=1">
+		<title>Michele's Portfolio</title>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-sm-2 col-xs-2">
+						<img class="title-logo" src="imgs/logo.png" alt="logo">
+					</div>
+					<div class="col-md-10 col-sm-10 col-xs-10 text-right text-uppercase">
+						<h1 class="title-super text-thin">Michele Ford</h1>
+						<h4 class="title-small">Front-End Ninja</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<hr>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- TODO:  add NAV -->
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 main_img">
+						<img class="img-responsive" src="imgs/main-img.jpg" alt="main kitten">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="title_sub text-muted">Past Work</h2>
+					</div>
+				</div>
+				<div class="row">
+					<!-- TODO:  add actual projects with links -->
+					<div class="col-md-4 col-sm-4 text-center">
+						<img class="img-responsive project-imgs" src="imgs/illustration.jpg" alt="project1" data-toggle="modal" data-target="#project1">
+						<h3 class="uppercase">Illustrations</h3>
+						<p class="project_links"><a href="#">https://github/udacity/illustrations</a></p>
+					</div>
+					<div class="col-md-4 col-sm-4 text-center">
+						<img class="img-responsive project-imgs" src="imgs/print.jpg" alt="project2" data-toggle="modal" data-target="#project2">
+						<h3 class="uppercase">Print</h3>
+						<p class="project_links"><a href="#">https://github/udacity/print</a></p>
+					</div>
+					<div class="col-md-4 col-sm-4 text-center">
+						<img class="img-responsive project-imgs" src="imgs/digital.jpg" alt="project3" data-toggle="modal" data-target="#project3">
+						<h3 class="uppercase">Digital</h3>
+						<p class="project_links"><a href="#">https://github/udacity/digital</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Modal -->
+		<!-- TODO:  add project descriptions to Modal boxes -->
+		<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="Project1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="Project1">Illustrations</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive" src="imgs/illustration.jpg" alt="illustration">
+						<p>Here I would insert my illustration projects.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="Project2" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="Project2">Print</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive" src="imgs/print.jpg" alt="print">
+						<p>Here I would insert my print projects.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="Project3" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="Project3">Digital</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive" src="imgs/digital.jpg" alt="digital">
+						<p>Here I would insert my digital projects.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p>Michele Ford | Copyright &copy; 2015</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
