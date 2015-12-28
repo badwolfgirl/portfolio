@@ -1,5 +1,5 @@
 body {
-	font: normal bold 14px/18px "Lato", sans-serif;
+	font: normal bold 14px/18px "Raleway", sans-serif;
 	color: #360;
 }
 
@@ -42,8 +42,26 @@ hr {
 }
 
 .main_img {
+	position: relative;
 	height: 400px;
 	overflow: hidden;
+}
+
+.main_img img{
+    position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.pic-caption{
+	position: absolute;
+	bottom: 35px;
+	right: 50px;
+	font-style: italic;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 4px 8px;
+    border-radius: 2px;
 }
 
 .project-imgs {
@@ -67,12 +85,15 @@ hr {
 	.title-super {
 		font-size: 48px;
 	}
+	.main_img {
+		height: 350px;/**/
+		overflow: visible;
+	}
 }
 
 @media screen and (max-width: 630px) {
 	.main_img {
-		height: auto;
-		overflow: visible;
+		height: 250px;
 	}
 	.project_links {
 		padding: 10px;
