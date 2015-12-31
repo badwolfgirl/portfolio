@@ -7,7 +7,6 @@
 		<title>Michele's Portfolio</title>
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Raleway:100,300,500,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -16,12 +15,12 @@
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-2 col-sm-2 col-xs-2">
+					<div class="col-md-3 col-sm-3 col-xs-3">
 						<img class="title-logo" src="imgs/logo.png" alt="logo">
 					</div>
-					<div class="col-md-10 col-sm-10 col-xs-10 text-right text-uppercase">
+					<div class="col-md-9 col-sm-9 col-xs-9 text-right text-uppercase">
 						<h1 class="title-super text-thin">Michele Ford</h1>
-						<h4 class="title-small">Front-End Master</h4>
+						<h4 class="title-small">Front-End Ninja</h4>
 					</div>
 				</div>
 				<div class="row">
@@ -35,9 +34,23 @@
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 main_img">
-						<img class="img-responsive" src="imgs/waterfall.jpg" alt="waterfall">
-						<div class="pic-caption">Hawaii, 2013</div>
+					<div class="col-md-12 main_img_container">
+						<ul class="main_img">
+							<li style="display: inline-block;">
+								<img class="img-responsive" src="imgs/yellow-hibiscus.jpg" alt="yellow hibiscus">
+								<div class="pic-caption">Hawaii, 2013</div>
+							</li>
+							<li>
+								<img class="img-responsive" src="imgs/waterfall.jpg" alt="waterfall">
+								<div class="pic-caption">Hawaii, 2013</div>
+							</li>
+							<li>
+								<img class="img-responsive" src="imgs/pink-hibiscus.jpg" alt="pink hibiscus">
+								<div class="pic-caption">Hawaii, 2013</div>
+							</li>
+						</ul>
+						<button class="next">Next</button>
+						<button class="prev">Previous</button>
 					</div>
 				</div>
 				<div class="row">
@@ -129,5 +142,42 @@
 				</div>
 			</div>
 		</footer>
+		<script type="text/javascript">
+			var currentIndex = 0;
+			items = $("ul li");
+			itemAmt = items.length;
+
+			function cycleItems(){
+				var item = $("ul li").eq(currentIndex);
+				items.hide();
+				item.css("display", "inline-block");
+			}
+			var autoSlide = setInterval(function() {
+				currentIndex += 1;
+				if (currentIndex > itemAmt - 1) {
+					currentIndex = 0;
+				}
+				cycleItems();
+			}, 5000);	
+
+
+			$('.next').click(function() {
+			  clearInterval(autoSlide);
+			  currentIndex += 1;
+			  if (currentIndex > itemAmt - 1) {
+			    currentIndex = 0;
+			  }
+			  cycleItems();
+			});
+
+			$('.prev').click(function() {
+			  clearInterval(autoSlide);
+			  currentIndex -= 1;
+			  if (currentIndex < 0) {
+			    currentIndex = itemAmt - 1;
+			  }
+			  cycleItems();
+			})
+		</script>
 	</body>
 </html>
